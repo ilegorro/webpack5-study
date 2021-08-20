@@ -9,3 +9,7 @@ According to [this video](https://www.youtube.com/watch?v=TOb1c39m64A)
 ### Install Babel modules
 
 > `npm i -D babel-loader @babel/core @babel/preset-env`
+
+### Install modules for css processing
+
+> npm i -D css-loader mini-css-extract-plugin
