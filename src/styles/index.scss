@@ -1,0 +1,11 @@
+@use 'global';
+
+/*
+The @use is similar to @import. but has some notable differences:
+    - The file is only imported once, no matter how many times you @use it in a project.
+    - Variables, mixins, and functions (what Sass calls “members”) that start with an underscore (_) or hyphen (-) are considered private, and not imported.
+    - Members from the used file (buttons.scss in this case) are only made available locally, but not passed along to future imports.
+    - Similarly, @extends will only apply up the chain; extending selectors in imported files, but not extending files that import this one.
+    - All imported members are namespaced by default.
+https://css-tricks.com/introducing-sass-modules/    
+*/
