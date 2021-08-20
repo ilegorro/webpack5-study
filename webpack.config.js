@@ -9,8 +9,19 @@ if (process.env.NODE_ENV === 'production') {
 module.exports = {
   mode: mode,
 
+  output: {
+    assetModuleFilename: 'images/[hash][ext][query]',
+    clean: true, // clean folder before build
+  },
+
   module: {
     rules: [
+      // In order to import images in components.
+      // Useng images in css works well without this section
+      {
+        test: /\.(jpe?g|png|svg|gif)/i,
+        type: 'asset/resource',
+      },
       {
         test: /\.s?css$/i, // .css or .scss at the end of string case insensitive
         // or test: /\.(s[ac]|c)ss$/i, // supporting .sass, scss, css
