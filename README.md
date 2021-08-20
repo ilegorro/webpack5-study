@@ -12,8 +12,12 @@ According to [this video](https://www.youtube.com/watch?v=TOb1c39m64A)
 
 ### Install modules for css processing
 
-> npm i -D css-loader mini-css-extract-plugin
+> `npm i -D css-loader mini-css-extract-plugin`
 
 ### Install modules for scss processing
 
-> npm i -D sass sass-loader
+> `npm i -D sass sass-loader`
+
+### Install postcss modules
+
+> `npm i -D postcss postcss-preset-env postcss-loader`

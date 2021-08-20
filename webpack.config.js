@@ -13,7 +13,13 @@ module.exports = {
     rules: [
       {
         test: /\.s?css$/i, // .css or .scss at the end of string case insensitive
-        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        // or test: /\.(s[ac]|c)ss$/i, // supporting .sass, scss, css
+        use: [
+          MiniCssExtractPlugin.loader,
+          'css-loader',
+          'postcss-loader',
+          'sass-loader',
+        ],
       },
       {
         test: /\.js$/,
