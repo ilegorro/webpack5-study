@@ -21,3 +21,8 @@ According to [this video](https://www.youtube.com/watch?v=TOb1c39m64A)
 ### Install postcss modules
 
 > `npm i -D postcss postcss-preset-env postcss-loader`
+
+### Install React modules
+
+> `npm i react react-dom`
+> `npm i -D @babel/preset-react`
