@@ -20,7 +20,20 @@ module.exports = {
       // Using images in css works well without this section
       {
         test: /\.(jpe?g|png|svg|gif)$/i,
-        type: 'asset/resource',
+
+        //type: 'asset/resource', // images in separate files
+
+        // if images are small then 'inline' helps to reduce the number of requests
+        // type: 'asset/inline', // images as base64 data
+
+        type: 'asset', // automatic 'resource' or 'inline' for each resource according to the threshold condition
+
+        // set threshold condition instead of default
+        // parser: {
+        //   dataUrlCondition: {
+        //     maxSize: 30 * 1024,
+        //   },
+        // },
       },
       {
         test: /\.s?css$/i, // .css or .scss at the end of string case insensitive
