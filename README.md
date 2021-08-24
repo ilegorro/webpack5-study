@@ -29,4 +29,4 @@ According to [this video](https://www.youtube.com/watch?v=TOb1c39m64A)
 
 ### Install Html template plugin
 
-> 'npm i -D html-webpack-plugin'
+> `npm i -D html-webpack-plugin`
