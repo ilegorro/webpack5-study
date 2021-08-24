@@ -11,15 +11,15 @@ module.exports = {
 
   output: {
     assetModuleFilename: 'images/[hash][ext][query]',
-    clean: true, // clean folder before build
+    // clean: true, // clean folder before build !index.html wil be removed!
   },
 
   module: {
     rules: [
       // In order to import images in components.
-      // Useng images in css works well without this section
+      // Using images in css works well without this section
       {
-        test: /\.(jpe?g|png|svg|gif)/i,
+        test: /\.(jpe?g|png|svg|gif)$/i,
         type: 'asset/resource',
       },
       {
