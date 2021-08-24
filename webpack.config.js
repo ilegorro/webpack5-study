@@ -1,4 +1,6 @@
+const path = require('path')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 let mode = 'development'
 
@@ -10,8 +12,11 @@ module.exports = {
   mode: mode,
 
   output: {
+    path: path.resolve(__dirname, 'dist'), // optional if path is default
+
     assetModuleFilename: 'images/[hash][ext][query]',
-    // clean: true, // clean folder before build !index.html wil be removed!
+    clean: true, // clean folder before build.
+    // !index.html wil be removed if template is not used!
   },
 
   module: {
@@ -55,7 +60,12 @@ module.exports = {
     ],
   },
 
-  plugins: [new MiniCssExtractPlugin()],
+  plugins: [
+    new MiniCssExtractPlugin(),
+    new HtmlWebpackPlugin({
+      template: './src/index.html',
+    }),
+  ],
 
   resolve: {
     extensions: ['.js', '.jsx'],

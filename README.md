@@ -26,3 +26,7 @@ According to [this video](https://www.youtube.com/watch?v=TOb1c39m64A)
 
 > `npm i react react-dom`\
 > `npm i -D @babel/preset-react`
+
+### Install Html template plugin
+
+> 'npm i -D html-webpack-plugin'
